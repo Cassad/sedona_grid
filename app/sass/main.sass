@@ -37,11 +37,67 @@ body textarea:required:valid
 	color: #666
 
 
-
-span
-	font-family: $df
+// _________________________________index.html-start________________________________
 	
+.contain
+	width: 320px
+	margin: 0 auto
 
+.main-header
+	position: relative
+	min-height: 389px
+	background-color: #fff
+	background-image: url("../img/background_img/header/text-mobile.png"), url("../img/background_img/header/mobile_header_treangle.png"), url("../img/background_img/header/back-mobile.jpg")
+	background-repeat: no-repeat
+	background-position: center, bottom 
+	overflow: hidden
+
+.navigation
+	position: relative	
+
+.menu-list
+	list-style: none
+	padding: 0
+	margin: 0
+
+
+.menu-list__link
+	display: block
+	font-size: 18px
+	line-height: 40px
+	font-weight: bold
+	text-align: center
+	text-decoration: none	
+	color: #fff	
+	background-color: $accent
+	transition: all 0.3s ease
+	&[href]:focus,
+	&[href]:hover
+		background-color: darken($accent, 20%)
+	&[href]:active
+		background-color: darken($accent, 25%)	
+		color: rgba(255,255,255,0.3)
+
+.menu-list__item:not(:last-child)
+	border-bottom: 1px solid #678fa8
+
+.menu-list__item:not(:first-child)
+	border-top: 1px solid #9ac2db	
+
+.logo-container
+	height: 56px
+	background-color: #fff
+	width: 320px
+	
+.main-header__logo
+	position: absolute
+	left: calc(50% - 51px)
+
+.menu-list__item:nth-of-type(2)
+
+
+ 
+	
 
 
 

@@ -17,15 +17,170 @@
 
 
 /*==========  Mobile First  ==========*/
-
 // ≤576px
+
 +media-breakpoint-up(sm)
+@media (min-width: 320px) and (max-width: 767px)
+	.navigation--closed
+		.menu-list
+			transform: translateY(-200px)
+			// transition: transform 5s ease
+		.logo-container
+			transform: translateY(-166px)
+			// transition: transform 1s ease	
+		.navigation__toggle
+			position: absolute
+			border: none
+			right: 20px
+			top: calc(50% - 10px)
+			width: 23px
+			height: 21px
+			background-color: transparent
+			cursor: pointer
+			outline: none
+		.toggles
+			position: absolute
+			display: block
+			width: 23px
+			height: 4px
+			background-color: $accent
+			left: 0
+			top: 0
+			&::before,
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				width: 23px
+				height: 4px
+				background-color: $accent
+			&::before
+				top: 8px
+			&::after
+				top: 16px	
+	.navigation--opened
+		.menu-list
+			transform: translateY(0px)
+			// transition: transform 1s ease	
+		.logo-container
+			transform: translateY(0px)
+			// transition: transform 1s ease	
+		.navigation__toggle
+			position: absolute
+			outline: none
+			border: none
+			right: 20px
+			top: -156px
+			width: 23px
+			height: 21px
+			background-color: transparent
+			cursor: pointer				
+		.toggles
+			position: absolute
+			display: block
+			width: 23px
+			height: 4px
+			background-color: #fff
+			left: -2px
+			top: 7px
+			transform: rotate(-45deg)
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				background-color: #fff
+				width: 23px
+				height: 4px
+				transform: rotate(90deg)
+			
+
+
+
+
+
 
 // ≤768px
 +media-breakpoint-up(md)
+	.contain
+		width: 768px
+		margin: 0 auto
+
+	.navigation__toggle
+		display: none	
+
+	.main-header
+		min-height: 518px
+		background-image: none
+		background-image: url("../img/background_img/header/text-tablet.png"), url("../img/background_img/header/tablet_header_triangle.png"), url("../img/background_img/header/back-tablet.jpg")
+		background-position: 50% 60%, bottom 
+
+	.menu-list
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		.menu-list__item
+			border: none
+			&:nth-child(4)
+				grid-column: 5
+			&:nth-child(3)
+				grid-column: 4	
+
+	.menu-list__link
+		background-color: #fff
+		color: #000
+		font-size: 14px
+		line-height: 26px
+		padding: 16px 0
+		&:not([href])
+			color: #766357
+			&:focus,
+			&:hover
+				color: #604e43
+			&:active
+				color: rgba(96,78,67,0.3)	
+		&[href]:focus,
+		&[href]:hover
+			background-color: #fff
+			color: $accent
+		&[href]:active
+			color: #b2b2b2
+
+	.logo-container
+		position: absolute
+		width: 102px
+		height: 83px
+		background-color: transparent
+		left: calc(50% - 51px)
+		top: 0
+
+	.main-header__logo
+		left: 0	
+
+
+
 
 // ≤992px
 +media-breakpoint-up(lg)
 
 // ≤1200px
 +media-breakpoint-up(xl)
+	.contain
+		width: 1200px
+		margin: 0 auto
+
+
+	.navigation__toggle
+		display: none	
+
+	.main-header
+		background-image: none
+		background-image: url("../img/background_img/header/text-desktop.png"), url("../img/background_img/header/desktop_header_triangle.png"), url("../img/background_img/header/back-desktop.jpg")	
+		background-size: auto, auto, 1120px 
+		padding: 0 40px
+		background-color: #f2f2f2
+		
+
+	.logo-container
+		width: 188px
+		height: 96px
+		left: calc(50% - 94px)
+
