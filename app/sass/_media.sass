@@ -105,6 +105,9 @@
 		width: 768px
 		margin: 0 auto
 
+	.navigation
+		background-color: #fff	
+
 	.navigation__toggle
 		display: none	
 
@@ -155,8 +158,94 @@
 	.main-header__logo
 		left: 0	
 
+	.slogan
+		padding: 50px 10px
+		br
+			display: none	
+
+	.slogan__title,
+	.slogan__text
+		width: 490px
+
+	.slogan__title
+		font-size: 21px	
+
+	.reasons__list
+		grid-template-columns: 1fr 1fr 1fr
+		.reason--1
+			grid-row: 1
+		.photo--1
+			grid-column: 2/4
+			grid-row: 1
+		.sight--house
+			grid-column: 1
+			grid-row: 2 	
+		.sight--gift
+			grid-column: 3
+			grid-row: 2	
+		.sight--burger
+			grid-column: 2
+			grid-row: 2	
+		.reason--2
+			grid-column: 3
+			grid-row: 3
+		.photo--2
+			grid-column: 1/3
+			grid-row: 3	
+
+	.reasons__title
+		font-size: 21px
+		width: 125px
+
+	.reasons__text
+		width: 140px
+
+	.reason--4,
+	.reason--5
+		border: none	
+
+	.sight
+		display: grid
+		justify-items: center
+		padding-top: 164px
+		padding-left: 0
+		padding-right: 0
+		padding-bottom: 65px
+		text-align: center
+		background-position: 50% 60px
+		&--house
+			background-image: url("../img/icon/tablet-icon-house.png")
+		&--gift
+			background-image: url("../img/icon/tablet-icon-gift.png")	
+		&--burger
+			background-image: url("../img/icon/tablet-icon-burger.png")	
 
 
+
+	.sight__title
+		font-size: 21px
+
+	.sight__text
+		width: 145px	
+
+	.adress__slogan
+		font-size: 30px
+		padding-top: 50px
+		margin-bottom: 35px
+
+	.adress__text
+		line-height: 24px
+		margin-bottom: 42px
+		width: 435px
+
+	.adress__btn
+		width: 460px
+		margin-bottom: 60px	
+
+
+	.footer-wrapper
+		grid-template-columns: repeat(3, 1fr)	
+		grid-template-rows: repeat(1, minmax(120px, auto))					
 
 // ≤992px
 +media-breakpoint-up(lg)
@@ -164,9 +253,8 @@
 // ≤1200px
 +media-breakpoint-up(xl)
 	.contain
-		width: 1200px
+		width: 1280px
 		margin: 0 auto
-
 
 	.navigation__toggle
 		display: none	
@@ -174,7 +262,7 @@
 	.main-header
 		background-image: none
 		background-image: url("../img/background_img/header/text-desktop.png"), url("../img/background_img/header/desktop_header_triangle.png"), url("../img/background_img/header/back-desktop.jpg")	
-		background-size: auto, auto, 1120px 
+		background-size: auto, auto, auto
 		padding: 0 40px
 		background-color: #f2f2f2
 		
@@ -184,3 +272,17 @@
 		height: 96px
 		left: calc(50% - 94px)
 
+	.site-main
+		padding: 0 40px
+		background-color: #f2f2f2	
+		overflow: hidden
+
+	.reasons__text
+		width: 257px
+
+	.main-footer
+		padding: 0 40px
+		background-color: #f2f2f2	
+
+	.footer-wrapper
+		background-color: #fff	

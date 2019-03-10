@@ -43,6 +43,25 @@ body textarea:required:valid
 	width: 320px
 	margin: 0 auto
 
+.button
+	display: block
+	text-decoration: none
+	color: #fff	
+	font-weight: bold
+	font-size: 21px
+	line-height: 26px
+	background-color: $accent
+	width: 280px
+	text-align: center
+	padding: 15px 10px
+	transition: background-color 0.5s ease
+	&:focus,
+	&:hover
+		background-color: darken($accent, 20%)
+	&:active
+		background-color: darken($accent, 25%)	
+		color: rgba(255,255,255,0.3)
+
 .main-header
 	position: relative
 	min-height: 389px
@@ -53,7 +72,8 @@ body textarea:required:valid
 	overflow: hidden
 
 .navigation
-	position: relative	
+	position: relative
+
 
 .menu-list
 	list-style: none
@@ -93,13 +113,245 @@ body textarea:required:valid
 	position: absolute
 	left: calc(50% - 51px)
 
-.menu-list__item:nth-of-type(2)
+.slogan
+	display: flex
+	flex-direction: column
+	align-items: center
+	background-color: #fff
+	// padding: 44px 36px 25px 36px
+	padding: 
+					top: 44px
+					bottom: 25px
 
+
+.slogan__title,
+.slogan__text
+	margin: 0
+	width: 247px
+	text-align: center
+
+
+.slogan__title
+	font-size: 18px
+	line-height: 26px	
+	margin-bottom: 28px	
+	font-weight: bold
+
+.slogan__text
+	line-height: 26px
+
+.reasons
+	background-color: #fff
+
+.reasons__list
+	display: grid
+	grid-template-columns: 1fr
+	overflow: hidden
+	.reason--1
+		grid-row: 1
+	.photo--1
+		grid-row: 2
+	.sight--house
+		grid-row: 3 	
+	.sight--gift
+		grid-row: 4	
+	.sight--burger
+		grid-row: 5	
+	.reason--2
+		grid-row: 6
+	.photo--2
+		grid-row: 7	
+
+
+
+.photo
+	transition: transform 0.3s ease
+.photo:hover
+	transform: scale(1.05)
+
+.reasons__photo
+	display: block
 
  
-	
+.reason
+	display: grid
+	justify-items: center
+	text-align: center
+	padding: 42px 10px
+	background-color: #eee
+
+.reasons__title
+	font-size: 18px
+	line-height: 26px
+	margin-bottom: 10px
+
+.reasons__number
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 18px
+	&::before,
+	&::after
+		content: ''
+		display: block
+		width: 10px
+		height: 2px
+		background-color: #000	
+	&::before
+		margin-right: 7px
+	&::after
+		margin-left: 7px	
+			
+.reasons__text
+	margin: 0	
 
 
+.reason--1,
+.reason--2
+	background-color: $accent
+	color: #fff
+	.reasons__number::before,
+	.reasons__number::after
+		background-color: #fff
+
+.reason--4,
+.reason--5
+	border-top: 1px solid #d6d6d6	
+
+.reasons__text
+	width: 220px
+
+.sight
+	background-color: #fff
+	min-height: 150px
+	padding:
+					top: 30px
+					left: 70px
+					right: 50px
+	background-repeat: no-repeat
+	background-position: 20px 20px				
+	&--house
+		background-image: url("../img/icon/mobile-icon-house.png")
+	&--gift
+		background-image: url("../img/icon/mobile-icon-gift.png")
+	&--burger
+		background-image: url("../img/icon/mobile-icon-burger.png")
+
+
+.sight__title
+	font-size: 18px
+	line-height: 26px
+	margin-bottom: 18px	
+
+.sight__text
+	margin: 0
+
+.adress
+	background-color: #fff	
+	text-align: center
+	display: grid
+	justify-items: center
+
+.adress__slogan
+	display: block
+	font-size: 21px
+	line-height: 26px
+	padding-top: 30px
+	margin-bottom: 23px
+
+.adress__text
+	margin: 0
+	width: 230px
+	margin-bottom: 35px
+
+.adress__btn
+	margin-bottom: 50px		
+
+
+.main-footer
+	background-color: #fefefe
+	// padding-top: 38px
+	// padding-bottom: 23px
+
+.footer-wrapper
+	display: grid
+	grid-template-rows: repeat(3, minmax(81px, auto))
+	justify-items: center
+	align-items: center
+
+.main-footer__title
+	font-size: 21px
+	line-height: 26px	
+
+.social
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-column-gap: 6px
+	margin: 0
+	padding: 0	
+	list-style: none
+
+.social__link
+	display: block
+	text-decoration: none	
+	width: 46px
+	height: 48px
+	font-size: 0
+	.fab
+		font-size: 20px
+
+.HTML-Academy
+	display: block
+	text-decoration: none
+	color: #000
+	padding: 7px 38px 7px 0
+	background-repeat: no-repeat
+	background-position: right center
+	background-image: url("../img/icon/HTML.png")
+
+
+
+
+
+
+
+
+//________________________________flip-card(start)____________________________________
+.card
+	position: relative
+	margin: 100px 0 100px 100px
+	width: 200px
+	height: 300px
+	perspective: 1000px
+
+.back, .front
+	display: flex
+	justify-content: center
+	align-items: center
+	position: absolute
+	bottom: 0
+	right: 0
+	top: 0
+	left: 0
+	transition: transform 1s ease
+	backface-visibility: hidden
+
+
+.front
+	background-color: black
+	color: #fff
+
+.back
+	background-color: #fff	
+	transform: rotateY(180deg)
+
+.card:hover .front
+	transform: rotateY(180deg)
+
+.card:hover .back
+	transform: rotateY(360deg)
+
+//_______________________________flip-card(end)______________________________				
 
 @import "media" // Всегда в конце
 
