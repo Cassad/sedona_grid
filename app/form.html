@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Sedona_grid_form</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body class="inner-page">
+	<header class="main-header contain">
+		<h1 class="visually-hidden">Городок Sedona</h1>
+		<nav class="main-header__nav navigation navigation--closed navigation--nojs">
+			<ul class="navigation__menu menu-list">
+				<li class="menu-list__item">
+					<a href="index.html" class="menu-list__link">Главная</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="Photo.html" class="menu-list__link">Фото и видео</a>
+				</li>
+				<li class="menu-list__item">
+					<a class="menu-list__link">Форма отзыва</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="#" class="menu-list__link">HTML ACADEMY</a>
+				</li>
+			</ul>
+			<div class="logo-container">
+				<a href="index.html" class="main-header__logo">
+					<picture>
+						<source
+						media="(min-width: 1200px)"
+						srcset="img/logo/logotype-desktop.png">
+						<img src="img/logo/logotyle-mobile.png" alt="Логотип" class="logo">
+					</picture>
+				</a>
+				<button class="navigation__toggle">
+					<span class="toggles"></span>
+				</button>
+			</div>			
+		</nav>
+	</header>
+	<main class="site-main contain">
+		<section class="feedback">
+			<h2 class="visually-hidden">форма отзыва</h2>
+			<div class="feedback-wrapper">
+				<h2 class="feedback__title">Оставьте свой отзыв</h2>
+				<p class="feedback__text">
+					Помогите нашим отелям стать лучше! Оставьте отзыв о них,
+					а также о посещенных вами достопримечательностях
+				</p>
+			</div>
+			<form action="" class="feedback__form form">
+				<fieldset class="field info">
+					<h3 class="field__title info__title">Представьтесь:</h3>
+					<div class="info-wrapper">
+						<label for="user-name">Имя*:</label>
+						<input type="text" name="name" id="user-name" placeholder="Ваше имя">
+					</div>
+					<div class="info-wrapper">
+						<label for="user-surname">Фамилия*:</label>
+						<input type="text" name="surname" id="user-surname" placeholder="Ваша фамилия">
+					</div>
+					<div class="info-wrapper">
+						<label for="user-patronymic">Отчество:</label>
+						<input type="text" name="patronymic" id="user-patronymic" placeholder="Ваше отчество">
+					</div>												
+				</fieldset>
+				<fieldset class="field contacts">
+					<h3 class="field__title contacts__title">Контактная информация:</h3>
+					<div class="contacts-wrapper">
+						<label for="user-phone">Контакный телефон*:</label>
+						<input type="tel" name="phone" id="user-phone" placeholder="Введите телефон">
+						<i class="fas fa-phone"></i>
+					</div>
+					<div class="contacts-wrapper">
+						<label for="user-email">Электронная почта*:</label>
+						<input type="email" name="email" id="user-email" placeholder="Введите e-mail">
+						<i class="fas fa-envelope"></i>
+					</div>
+				</fieldset>
+				<fieldset class="field impressions">
+					<h3 class="field__title impressions__title">Ваше общее впечатление</h3>
+					<div class="impressions-wrapper">
+						<label>
+							<input type="radio" name="answer">
+							<span class="radio-indicator"></span>
+							Скорее положительное
+						</label>
+					</div>
+					<div class="impressions-wrapper">
+						<label>
+							<input type="radio" name="answer">
+							<span class="radio-indicator"></span>
+							Скорее отрицательное
+						</label>
+					</div>
+					<div class="impressions-wrapper">
+						<label>
+							<input type="radio" name="answer">
+							<span class="radio-indicator"></span>
+							Затрудняюсь ответить
+						</label>
+					</div>
+				</fieldset>
+				<fieldset class="field attractions">
+					<h3 class="field__title attractions__title">Посещенные достопримечательности</h3>
+					<div class="attractions-wrapper">
+						<label>
+							<input type="checkbox" name="Devil-bridge" checked>
+							<span class="checkbox-indicator"></span>
+							Мост Дьявола
+						</label>
+					</div>
+					<div class="attractions-wrapper">
+						<label>
+							<input type="checkbox" name="mountain-bell" checked>
+							<span class="checkbox-indicator"></span>
+							Гора-Колокол
+						</label>
+					</div>
+					<div class="attractions-wrapper">
+						<label>
+							<input type="checkbox" name="Slide-park" checked>
+							<span class="checkbox-indicator"></span>
+							Слайд-парк
+						</label>
+					</div>
+					<div class="attractions-wrapper">
+						<label>
+							<input type="checkbox" name="red-rocks">
+							<span class="checkbox-indicator"></span>
+							Красные скалы
+						</label>
+					</div>
+				</fieldset>
+				<fieldset class="field emotions">
+					<h3 class="field__title emotions__title">Опишите свои эмоции</h3>
+					<div class="emotions-wrapper">
+						<label for="user-emotions"></label>
+						<textarea name="emotions" id="user-emotions" cols="30" rows="10">
+							Опишите подробно все свои эмоции
+						</textarea>
+					</div>
+				</fieldset>
+				<button class="button form__btn" type="submit">
+					Отпрвить отзыв
+				</button>
+			</form>	
+		</section>
+	</main>
+	<footer class="main-footer contain">
+		<div class="footer-wrapper">
+			<h2 class="main-footer__title">#visitsedona</h2>
+			<ul class="main-footer__list social">
+				<li class="social__item">
+					<a href="#" class="social__link button">Twitter<i class="fab fa-twitter"></i></a>
+				</li>
+				<li class="social__item">
+					<a href="#" class="social__link button">FaceBook<i class="fab fa-facebook-f"></i></a>
+				</li>
+				<li class="social__item">
+					<a href="#" class="social__link button">Youtube<i class="fab fa-youtube"></i></a>
+				</li>
+			</ul>
+			<a href="#" class="HTML-Academy">Разработано</a>
+		</div>
+	</footer>
+
+	<div class="card">
+		<div class="front"><span>Лицевая сторона</span></div>
+		<div class="back"><span>Обратная сторона</span></div>
+	</div>
+
+
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>
+
+	

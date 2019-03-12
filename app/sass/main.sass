@@ -2,40 +2,7 @@
 @import "libs"
 @import "vars"
 @import "base"
-
-
-*
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
-
-*::-webkit-input-placeholder
-	color: #000
-	opacity: 1
-
-*:-moz-placeholder
-	color: #000
-	opacity: 1
-
-*::-moz-placeholder
-	color: #000
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #000
-	opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
-
+@import "blocks/feedback"
 
 // _________________________________index.html-start________________________________
 	
@@ -62,6 +29,7 @@ body textarea:required:valid
 		background-color: darken($accent, 25%)	
 		color: rgba(255,255,255,0.3)
 
+		
 .main-header
 	position: relative
 	min-height: 389px
